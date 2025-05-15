@@ -1,5 +1,8 @@
+import logging
 from abc import ABC, abstractmethod
+from typing import List
 
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
 class Vehicle(ABC):
     def __init__(self, make, model, spec):
@@ -14,12 +17,12 @@ class Vehicle(ABC):
 
 class Car(Vehicle):
     def start_engine(self):
-        print(f"{self.make} {self.model} ({self.spec}): Двигун запущено")
+        logging.info(f"{self.make} {self.model} ({self.spec}): Двигун запущено")
 
 
 class Motorcycle(Vehicle):
     def start_engine(self):
-        print(f"{self.make} {self.model} ({self.spec}): Мотор заведено")
+        logging.info(f"{self.make} {self.model} ({self.spec}): Мотор заведено")
 
 
 class VehicleFactory(ABC):
