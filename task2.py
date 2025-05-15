@@ -17,15 +17,15 @@ class Book:
 class LibraryInterface(ABC):
     @abstractmethod
     def add(self, book: Book) -> None:
-        ...
+        pass
 
     @abstractmethod
     def remove(self, title: str) -> None:
-        ...
+        pass
 
     @abstractmethod
     def list_books(self) -> List[Book]:
-        ...
+        pass
 
 
 class Library(LibraryInterface):

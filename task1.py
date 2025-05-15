@@ -12,7 +12,7 @@ class Vehicle(ABC):
 
     @abstractmethod
     def start_engine(self) -> None:
-        ...
+        pass
 
 
 class Car(Vehicle):
@@ -28,11 +28,11 @@ class Motorcycle(Vehicle):
 class VehicleFactory(ABC):
     @abstractmethod
     def create_car(self, make: str, model: str) -> Vehicle:
-        ...
+        pass
 
     @abstractmethod
     def create_motorcycle(self, make: str, model: str) -> Vehicle:
-        ...
+        pass
 
 
 class USVehicleFactory(VehicleFactory):
